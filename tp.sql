@@ -10,3 +10,12 @@ CREATE TABLE duenos (
     telefono VARCHAR(20) NOT NULL,
     direccion VARCHAR(100)
 );
+-- Ejercicio 3: Crear tabla mascotas
+CREATE TABLE mascotas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    especie VARCHAR(30) NOT NULL,
+    fecha_nacimiento DATE,
+    id_dueno INT,
+    FOREIGN KEY (id_dueno) REFERENCES duenos(id)
+);
