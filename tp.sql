@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS veterinaria_patitas_felices;
+CREATE DATABASE veterinaria_patitas_felices;
+USE veterinaria_patitas_felices;
