@@ -74,3 +74,6 @@ SET descripcion = 'Chequeo general'
 WHERE id = 2;
 -- Ejercicio 8 -
 --1) Eliminar una mascota (por nombre)
+DELETE FROM mascotas
+WHERE nombre = 'Manchita';
+--Se elimino la mascota y su historial clinico.
