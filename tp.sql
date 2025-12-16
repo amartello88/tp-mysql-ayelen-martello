@@ -77,3 +77,11 @@ WHERE id = 2;
 DELETE FROM mascotas
 WHERE nombre = 'Manchita';
 --Se elimino la mascota y su historial clinico.
+-- Ejercicio 9  JOIN Simple
+SELECT m.nombre AS NombreMascota,
+    m.especie AS Especie,
+    CONCAT(d.nombre, ' ', d.apellido) AS NombreCompletoDueño
+FROM mascotas m
+    JOIN duenos d ON m.id_dueno = d.id
+WHERE m.nombre = 'Bubi';
+-- Ejercicio 10 JOIN múltiple con historial
