@@ -33,7 +33,7 @@ CREATE TABLE historial_clinico (
     id_veterinario INT,
     fecha_registro DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     descripcion VARCHAR(250) NOT NULL,
-    FOREIGN KEY (id_mascota) REFERENCES mascotas(id),
+    FOREIGN KEY (id_mascota) REFERENCES mascotas(id) ON DELETE CASCADE,
     FOREIGN KEY (id_veterinario) REFERENCES veterinarios(id)
 );
 -- Ejercicio 6 - Insertar registros
@@ -73,3 +73,4 @@ UPDATE historial_clinico
 SET descripcion = 'Chequeo general'
 WHERE id = 2;
 -- Ejercicio 8 -
+--1) Eliminar una mascota (por nombre)
