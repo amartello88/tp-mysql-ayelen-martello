@@ -85,3 +85,13 @@ FROM mascotas m
     JOIN duenos d ON m.id_dueno = d.id
 WHERE m.nombre = 'Bubi';
 -- Ejercicio 10 JOIN múltiple con historial
+SELECT m.nombre AS NombreMascota,
+    m.especie AS Especie,
+    CONCAT(d.nombre, ' ', d.apellido) AS NombreCompletoDueño,
+    CONCAT(v.nombre, ' ', v.apellido) AS NombreCompletoVeterinario,
+    h.fecha_registro AS FechaRegistro,
+    h.descripcion AS Descripcion
+FROM historial_clinico h
+    JOIN mascotas m ON h.id_mascota = m.id
+    JOIN duenos d ON m.id_dueno = d.id
+    JOIN veterinarios v ON h.id_veterinario = v.id;
